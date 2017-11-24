@@ -54,9 +54,11 @@
 		12E1E5BF1FC7D48300383CBF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E1E5BE1FC7D47E00383CBF /* AVFoundation.framework */; };
 		12E1E5C11FC7D4A000383CBF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E1E5C01FC7D48800383CBF /* CFNetwork.framework */; };
 		12E1E5C31FC7D4D100383CBF /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E1E5C21FC7D4AE00383CBF /* CoreAudio.framework */; };
+		40659DF7173BD7F863830C52 /* Pods_ChatDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052FABD233404587AEF73F2C /* Pods_ChatDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		052FABD233404587AEF73F2C /* Pods_ChatDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		121746311FC7D54A00267B95 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		121746331FC7D55A00267B95 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		121746351FC7D56700267B95 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -109,6 +111,8 @@
 		12E1E5C01FC7D48800383CBF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		12E1E5C21FC7D4AE00383CBF /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		12E1E5C41FC7D50B00383CBF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7A0B882E76F381B873587519 /* Pods-ChatDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatDemo/Pods-ChatDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D198E1E3B44AC4E286CCDF26 /* Pods-ChatDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatDemo/Pods-ChatDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 				12E1E5BB1FC7D46700383CBF /* AssetsLibrary.framework in Frameworks */,
 				12E1E5B81FC7D44400383CBF /* RongIMLib.framework in Frameworks */,
 				12E1E5B61FC7D44400383CBF /* libopencore-amrnb.a in Frameworks */,
+				40659DF7173BD7F863830C52 /* Pods_ChatDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +188,7 @@
 				12E1E59E1FC7D14900383CBF /* ChatDemo */,
 				12E1E59D1FC7D14900383CBF /* Products */,
 				12E1E5B91FC7D46100383CBF /* Frameworks */,
+				CD1F19CD7BE3D363135901E3 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -245,8 +251,18 @@
 				12E1E5BE1FC7D47E00383CBF /* AVFoundation.framework */,
 				12E1E5BC1FC7D46D00383CBF /* AudioToolbox.framework */,
 				12E1E5BA1FC7D46100383CBF /* AssetsLibrary.framework */,
+				052FABD233404587AEF73F2C /* Pods_ChatDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD1F19CD7BE3D363135901E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D198E1E3B44AC4E286CCDF26 /* Pods-ChatDemo.debug.xcconfig */,
+				7A0B882E76F381B873587519 /* Pods-ChatDemo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,9 +272,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12E1E5AE1FC7D14A00383CBF /* Build configuration list for PBXNativeTarget "ChatDemo" */;
 			buildPhases = (
+				BFAFCF9C28712AD57B2D8138 /* [CP] Check Pods Manifest.lock */,
 				12E1E5981FC7D14900383CBF /* Sources */,
 				12E1E5991FC7D14900383CBF /* Frameworks */,
 				12E1E59A1FC7D14900383CBF /* Resources */,
+				FACF554C93EBD5267DC6CCBA /* [CP] Embed Pods Frameworks */,
+				CC0A77AE84F36A9FB1DB8FCC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,6 +338,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BFAFCF9C28712AD57B2D8138 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC0A77AE84F36A9FB1DB8FCC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatDemo/Pods-ChatDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FACF554C93EBD5267DC6CCBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChatDemo/Pods-ChatDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatDemo/Pods-ChatDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		12E1E5981FC7D14900383CBF /* Sources */ = {
@@ -479,6 +552,7 @@
 		};
 		12E1E5AF1FC7D14A00383CBF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D198E1E3B44AC4E286CCDF26 /* Pods-ChatDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -488,6 +562,7 @@
 					"$(PROJECT_DIR)/ChatDemo/IMLib",
 				);
 				INFOPLIST_FILE = ChatDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -505,6 +580,7 @@
 		};
 		12E1E5B01FC7D14A00383CBF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A0B882E76F381B873587519 /* Pods-ChatDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -514,6 +590,7 @@
 					"$(PROJECT_DIR)/ChatDemo/IMLib",
 				);
 				INFOPLIST_FILE = ChatDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
