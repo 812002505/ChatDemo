@@ -16,6 +16,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        RCIMClient.shared().initWithAppKey("bmdehs6pdlv8s")
+        
+        let url = URL(string: "https://api.cn.rong.io/user/getToken.json")
+        let parms = ["userid": "812002505", "name": "812002505", "portraitUrl": "http://upload.jianshu.io/users/upload_avatars/1164718/0529df063769?imageMogr2/auto-orient/strip|imageView2/1/w/120/h/120"]
+        let appkey = "bmdehs6pdlv8s"
+        let appSecret = "JlZglltnE8FQYc"
+        let nonce = "\(arc4random())"
+        let timestamp = "\(NSDate().timeIntervalSince1970)"
+        let sigValue = appSecret + nonce + timestamp;
+        let sigV = sigValue.sha1()
+        let headers = [
+            "App-key" : appkey,
+            "Nonce" : nonce,
+            "Timestamp" : timestamp,
+            "Signature" : sigV
+        ]
+        
+        
+        
         return true
     }
 
