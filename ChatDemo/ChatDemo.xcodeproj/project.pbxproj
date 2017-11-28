@@ -21,6 +21,11 @@
 		121746491FC7D5E900267B95 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121746481FC7D5E500267B95 /* OpenGLES.framework */; };
 		1217464B1FC7D5F000267B95 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1217464A1FC7D5EF00267B95 /* QuartzCore.framework */; };
 		1217464D1FC7D5F800267B95 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1217464C1FC7D5F700267B95 /* SystemConfiguration.framework */; };
+		121A2B5F1FCD40A500A3C149 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A2B5E1FCD40A500A3C149 /* Const.swift */; };
+		121A2B611FCD507100A3C149 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A2B601FCD507100A3C149 /* BaseViewController.swift */; };
+		121A2B631FCD511200A3C149 /* Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A2B621FCD511200A3C149 /* Values.swift */; };
+		121A2B671FCD557C00A3C149 /* ChatViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A2B661FCD557C00A3C149 /* ChatViewCell.swift */; };
+		121A2B691FCD5C4D00A3C149 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 121A2B681FCD5C4D00A3C149 /* Message.swift */; };
 		125BD74A1FC8073F00216129 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 125BD7361FC8073F00216129 /* LICENSE */; };
 		125BD74B1FC8073F00216129 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 125BD7371FC8073F00216129 /* README.md */; };
 		125BD74C1FC8073F00216129 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125BD7391FC8073F00216129 /* AFError.swift */; };
@@ -75,6 +80,11 @@
 		1217464A1FC7D5EF00267B95 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1217464C1FC7D5F700267B95 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1217464E1FC7D7CB00267B95 /* ChatDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		121A2B5E1FCD40A500A3C149 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		121A2B601FCD507100A3C149 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		121A2B621FCD511200A3C149 /* Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Values.swift; sourceTree = "<group>"; };
+		121A2B661FCD557C00A3C149 /* ChatViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewCell.swift; sourceTree = "<group>"; };
+		121A2B681FCD5C4D00A3C149 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		125BD7361FC8073F00216129 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		125BD7371FC8073F00216129 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		125BD7391FC8073F00216129 /* AFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
@@ -206,7 +216,12 @@
 				125BD7351FC8073F00216129 /* Alamofire */,
 				12E1E5B21FC7D44400383CBF /* IMLib */,
 				12E1E59F1FC7D14900383CBF /* AppDelegate.swift */,
+				121A2B601FCD507100A3C149 /* BaseViewController.swift */,
 				12E1E5A11FC7D14900383CBF /* ViewController.swift */,
+				121A2B661FCD557C00A3C149 /* ChatViewCell.swift */,
+				121A2B681FCD5C4D00A3C149 /* Message.swift */,
+				121A2B5E1FCD40A500A3C149 /* Const.swift */,
+				121A2B621FCD511200A3C149 /* Values.swift */,
 				125BD75D1FC80A1B00216129 /* String.swift */,
 				12E1E5A31FC7D14900383CBF /* Main.storyboard */,
 				12E1E5A61FC7D14900383CBF /* Assets.xcassets */,
@@ -398,12 +413,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				121A2B671FCD557C00A3C149 /* ChatViewCell.swift in Sources */,
 				125BD75B1FC8073F00216129 /* Timeline.swift in Sources */,
 				125BD7521FC8073F00216129 /* ParameterEncoding.swift in Sources */,
 				125BD75E1FC80A1B00216129 /* String.swift in Sources */,
 				125BD7561FC8073F00216129 /* Result.swift in Sources */,
 				125BD7511FC8073F00216129 /* Notifications.swift in Sources */,
 				125BD7501FC8073F00216129 /* NetworkReachabilityManager.swift in Sources */,
+				121A2B691FCD5C4D00A3C149 /* Message.swift in Sources */,
 				125BD74F1FC8073F00216129 /* MultipartFormData.swift in Sources */,
 				125BD7571FC8073F00216129 /* ServerTrustPolicy.swift in Sources */,
 				125BD7581FC8073F00216129 /* SessionDelegate.swift in Sources */,
@@ -411,6 +428,7 @@
 				12E1E5A01FC7D14900383CBF /* AppDelegate.swift in Sources */,
 				125BD74E1FC8073F00216129 /* DispatchQueue+Alamofire.swift in Sources */,
 				125BD7551FC8073F00216129 /* ResponseSerialization.swift in Sources */,
+				121A2B611FCD507100A3C149 /* BaseViewController.swift in Sources */,
 				125BD7541FC8073F00216129 /* Response.swift in Sources */,
 				125BD75C1FC8073F00216129 /* Validation.swift in Sources */,
 				125BD7531FC8073F00216129 /* Request.swift in Sources */,
@@ -418,6 +436,8 @@
 				125BD74D1FC8073F00216129 /* Alamofire.swift in Sources */,
 				125BD7591FC8073F00216129 /* SessionManager.swift in Sources */,
 				125BD74C1FC8073F00216129 /* AFError.swift in Sources */,
+				121A2B631FCD511200A3C149 /* Values.swift in Sources */,
+				121A2B5F1FCD40A500A3C149 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
